@@ -51,7 +51,7 @@ const Courses = () => {
       <div className="container-custom">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
           <div className="space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900"> <span className="text-primary">Flagship Programmes</span></h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 font-serif"> <span className="text-primary">Flagship Programmes</span></h2>
             <p className="text-gray-600 max-w-2xl text-lg">
               Engaging in interdisciplinary scholarship through high-impact conferences, colloquiums, and technical series.
             </p>

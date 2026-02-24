@@ -93,7 +93,7 @@ const Hero = () => {
       <div className="container-custom relative z-10 pt-32 pb-32">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="max-w-4xl space-y-8">
-            <h1 className="text-3xl lg:text-4xl font-serif  font-bold leading-[1.1] text-white animate-in fade-in slide-in-from-bottom duration-700 delay-100">
+            <h1 className="text-3xl lg:text-5xl font-serif  font-bold leading-[1.1] text-white animate-in fade-in slide-in-from-bottom duration-700 delay-100">
               Centre for Studies in <br />
               Population and Development
             </h1>
@@ -102,18 +102,12 @@ const Hero = () => {
               The Centre for Studies in Population and Development, hosted by the Department of Economics, CHRIST (Deemed to be University), strives to foster research expertise on themes related to population and development. The Centre envisions to be a leader in fostering interdisciplinary scholarship, with emphasis on economic, social and climate justice.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-6 pt-4 animate-in fade-in slide-in-from-bottom duration-700 delay-300">
+            <div className="mb-20 flex flex-col sm:flex-row gap-6 pt-4 animate-in fade-in slide-in-from-bottom duration-700 delay-300">
               <Link
                 href="/about-us"
                 className="bg-[#C8A97A] hover:bg-[#E8D5B4] text-[#5C1A2E] font-bold py-4 px-10 rounded-sm shadow-xl transition-all duration-300 text-sm uppercase tracking-widest text-center"
               >
                 Take A Deep Dive
-              </Link>
-              <Link
-                href="#research"
-                className="border border-[#C8A97A]/40 hover:border-[#C8A97A] text-white font-bold py-4 px-10 rounded-sm transition-all duration-300 text-sm uppercase tracking-widest text-center"
-              >
-                Learn More
               </Link>
             </div>
           </div>
@@ -202,7 +196,7 @@ const Hero = () => {
               <div className="text-white/50 text-[10px] uppercase tracking-widest mt-1">Initiatives</div>
             </div>
             <div className="text-center border-l border-white/10">
-              <div className="text-[#C8A97A] text-3xl font-serif font-bold">6</div>
+              <div className="text-[#C8A97A] text-3xl font-serif font-bold">31+</div>
               <div className="text-white/50 text-[10px] uppercase tracking-widests mt-1">Team Members</div>
             </div>
             <div className="text-center border-l border-white/10">
