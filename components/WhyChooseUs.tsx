@@ -5,7 +5,7 @@ const WhyChooseUs = () => {
     {
       icon: <Network className="w-10 h-10" />,
       title: "Population Dynamics & Ageing",
-      description: "Analyzing rapid demographic shifts and their implications for policy making globally."
+      description: "Analysing rapid demographic shifts and their implications for policy making globally."
     },
     {
       icon: <GraduationCap className="w-10 h-10" />,
