@@ -58,10 +58,25 @@ const Footer = () => {
           <div>
             <h4 className="font-bold text-xl mb-8 text-secondary font-serif italic">Research Focus</h4>
             <ul className="space-y-4">
-              {["Population Dynamics", "Health & Care Economy", "Labour Markets", "Science & Innovation", "Climate Change"].map((item) => (
-                <li key={item}>
-                  <Link href="#" className="text-white/60 hover:text-secondary transition-colors">
-                    {item}
+              {[
+                { name: "Population Dynamics", href: "/research-population-dynamics" },
+                { name: "Health & Care Economy", href: "/research-health-and-care-economy" },
+                {
+                  name: "Labour Markets",
+                  href: "/research-human-capital-and-labour-markets",
+                },
+                {
+                  name: "Science & Innovation",
+                  href: "/research-technology-and-innovation",
+                },
+                { name: "Climate Change", href: "/research-food-and-ecology" },
+              ].map((item) => (
+                <li key={item.name}>
+                  <Link
+                    href={item.href}
+                    className="text-white/60 hover:text-secondary transition-colors"
+                  >
+                    {item.name}
                   </Link>
                 </li>
               ))}
