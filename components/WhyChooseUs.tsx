@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Share2, Network, GraduationCap, MapPin, Activity } from "lucide-react";
 
 const WhyChooseUs = () => {
@@ -5,28 +6,33 @@ const WhyChooseUs = () => {
     {
       icon: <Network className="w-10 h-10" />,
       title: "Population Dynamics & Ageing",
-      description: "Analysing rapid demographic shifts and their implications for policy making globally."
+      description: "Analysing rapid demographic shifts and their implications for policy making globally.",
+      href: "/research-population-dynamics",
     },
     {
       icon: <GraduationCap className="w-10 h-10" />,
       title: "Human Capital & Labour Markets",
-      description: "Addressing youth employment, social security, and shrinking workforce challenges."
+      description: "Addressing youth employment, social security, and shrinking workforce challenges.",
+      href: "/research-human-capital-and-labour-markets",
     },
     {
       icon: <Share2 className="w-10 h-10" />,
       title: "Science, Technology & Innovation",
-      description: "Exploring the intersections of technological advancement and human development."
+      description: "Exploring the intersections of technological advancement and human development.",
+      href: "/research-technology-and-innovation",
     },
     {
       icon: <MapPin className="w-10 h-10" />,
       title: "Food, Ecology & Climate Change",
-      description: "Interdisciplinary research with concerns on equity and climate justice."
+      description: "Interdisciplinary research with concerns on equity and climate justice.",
+      href: "/research-food-and-ecology",
     },
     {
       icon: <Activity className="w-10 h-10" />,
       title: "Health, Medicine, and Care Economy",
-      description: "Explorations into healthcare systems, care work, and the social and economic dimensions of health and well-well-being."
-    }
+      description: "Explorations into healthcare systems, care work, and the social and economic dimensions of health and well-well-being.",
+      href: "/research-health-and-care-economy",
+    },
   ];
 
   return (
@@ -40,9 +46,10 @@ const WhyChooseUs = () => {
 
        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
   {labs.map((lab, index) => (
-    <div
+    <Link
       key={index}
-      className="group px-6 py-5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white hover:text-primary transition-all duration-500 hover:shadow-2xl hover:-translate-y-1"
+      href={lab.href}
+      className="group block px-6 py-5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white hover:text-primary transition-all duration-500 hover:shadow-2xl hover:-translate-y-1"
     >
       <div className="flex items-center gap-3 mb-3">
         <div className="p-2 rounded-xl bg-white/10 group-hover:bg-primary/5 transition-colors shrink-0 text-secondary group-hover:text-primary">
@@ -54,7 +61,7 @@ const WhyChooseUs = () => {
       <p className="text-white/70 group-hover:text-gray-600 leading-relaxed text-sm">
         {lab.description}
       </p>
-    </div>
+    </Link>
   ))}
 </div>
         
