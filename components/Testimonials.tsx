@@ -59,7 +59,7 @@ const Testimonials = () => {
               </h4>
 
               <p className="text-white/60 italic mb-8 flex-grow">
-                "{event.content}"
+                &quot;{event.content}&quot;
               </p>
 
               <div className="flex items-center space-x-4 pt-6 border-t border-white/10 mt-auto">

@@ -23,7 +23,7 @@ const themesRight = [
 
 const importantDates = [
   { label: "Conference Announcement", value: "February 20" },
-  { label: "Extended Abstract Submission", value: "April 15" },
+  { label: "Extended Abstract Submission", value: "May 5" },
   { label: "Selection Intimation", value: "May 15" },
   { label: "Full Paper Submission", value: "June 30" },
   { label: "Conference", value: "August 20 - 22" },
