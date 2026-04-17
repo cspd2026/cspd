@@ -46,7 +46,7 @@ const Navbar = () => {
       dropdown: [
         { name: "Seminars & Centre Talk Series", href: "/intitiatives-lecture-series" },
         { name: "HOPES Conference 2026", href: "/hopes-conference" },
-        { name: "Summer School", href: "/intitiatives-doctoral-colloquium" },
+        { name: "IHEPA-Christ Summer School 2026", href: "/summer-school" },
         { name: "Trainings & Workshops", href: "/intitiatives-training" },
         { name: "Faculty & Student Exchanges", href: "/intitiatives-faculty-student-exchanges" },
       ],

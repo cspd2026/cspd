@@ -1,4 +1,5 @@
-import { ArrowRight, BookOpen, Users, Presentation, Database, Mail } from "lucide-react";
+import Link from "next/link";
+import { BookOpen, Users, Presentation, Database } from "lucide-react";
 
 const Courses = () => {
   const programmes = [
@@ -7,42 +8,42 @@ const Courses = () => {
       category: "Flagship",
       description: "Annual International Conference of CSPD focusing on global demographic shifts.",
       icon: <Globe className="w-12 h-12 text-primary" />,
-      link: "https://cspdin.wordpress.com/intitiatives-conferences/"
+      link: ""
     },
     {
-      title: "Graduate Research Colloquium",
-      category: "Academic",
-      description: "Platform for doctoral students to showcase interdisciplinary research.",
+      title: "Summer School",
+      category: "Training",
+      description: "A five-day intensive academic programme designed to bridge theory, policy, and empirical practice in India's rapidly evolving health landscape.",
       icon: <Users className="w-12 h-12 text-primary" />,
-      link: "https://cspdin.wordpress.com/intitiatives-doctoral-colloquium/"
+      link: "/summer-school"
     },
     {
       title: "Centre Talk Series",
       category: "Lecture",
       description: "Regular scholarly lectures by leading experts in Economics and Social Sciences.",
       icon: <Presentation className="w-12 h-12 text-primary" />,
-      link: "https://cspdin.wordpress.com/intitiatives-lecture-series/"
+      link: "/intitiatives-lecture-series/"
     },
     {
       title: "Centre Webinar Series",
       category: "Hybrid",
       description: "Engaging global audiences through evidence-based research discussions.",
       icon: <Globe className="w-12 h-12 text-primary" />,
-      link: "https://cspdin.wordpress.com/"
+      link: ""
     },
     {
       title: "Centre Data Repository",
       category: "Resources",
       description: "Comprehensive data collection on population and development metrics.",
       icon: <Database className="w-12 h-12 text-primary" />,
-      link: "https://cspdin.wordpress.com/resources-data-repository/"
+      link: "/resources-data-repository/"
     },
     {
        title: "Publications",
        category: "Research",
        description: "Regular Books, Articles, Policy Briefs and Working Papers.",
        icon: <BookOpen className="w-12 h-12 text-primary" />,
-       link: "https://cspdin.wordpress.com/resources-publications-2/"
+       link: "/resources-publications-2/"
     }
   ];
 
@@ -58,34 +59,54 @@ const Courses = () => {
           </div>
         </div>
 
-       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-  {programmes.map((prog, index) => (
-    <div
-      key={index}
-      className="group bg-white rounded-2xl px-6 py-5 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col hover:-translate-y-1"
-    >
-      <div className="flex items-center gap-3 mb-3">
-        <div className="p-2 bg-primary/5 rounded-xl group-hover:bg-primary transition-all duration-500 shrink-0">
-          <div className="text-primary group-hover:text-white transition-colors duration-500">
-            {prog.icon}
-          </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {programmes.map((prog, index) => {
+            const isExternal = prog.link.startsWith("http");
+
+            const cardContent = (
+              <>
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="p-2 bg-primary/5 rounded-xl group-hover:bg-primary transition-all duration-500 shrink-0">
+                    <div className="text-primary group-hover:text-white transition-colors duration-500">
+                      {prog.icon}
+                    </div>
+                  </div>
+
+                  <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                    {prog.category}
+                  </span>
+                </div>
+
+                <h4 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors leading-tight">
+                  {prog.title}
+                </h4>
+
+                <p className="text-gray-600 leading-relaxed text-sm flex-grow">
+                  {prog.description}
+                </p>
+              </>
+            );
+
+            const cardClassName =
+              "group bg-white rounded-2xl px-6 py-5 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col hover:-translate-y-1";
+
+            return isExternal ? (
+              <a
+                key={index}
+                href={prog.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cardClassName}
+              >
+                {cardContent}
+              </a>
+            ) : (
+              <Link key={index} href={prog.link} className={cardClassName}>
+                {cardContent}
+              </Link>
+            );
+          })}
         </div>
-
-        <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
-          {prog.category}
-        </span>
-      </div>
-
-      <h4 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors leading-tight">
-        {prog.title}
-      </h4>
-
-      <p className="text-gray-600 leading-relaxed text-sm flex-grow">
-        {prog.description}
-      </p>
-    </div>
-  ))}
-</div>
       </div>
     </section>
   );
