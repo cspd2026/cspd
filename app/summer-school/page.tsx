@@ -611,6 +611,13 @@ export default function SummerSchoolPage() {
                   </div>
                 ))}
               </div>
+
+              <div className="mt-8 rounded-2xl bg-white/8 px-5 py-4">
+                <p className="text-sm font-semibold text-white">Note</p>
+                <p className="mt-2 text-sm leading-relaxed text-white/85">
+                  3-tier AC fare will be provided for all selected participants.
+                </p>
+              </div>
             </div>
 
             <div className="rounded-[2rem] bg-[#fcfbfa] p-8 ring-1 ring-[#5C1A2E]/10 md:p-10">
