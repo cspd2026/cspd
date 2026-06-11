@@ -23,9 +23,9 @@ const themesRight = [
 
 const importantDates = [
   { label: "Conference Announcement", value: "February 20" },
-  { label: "Extended Abstract Submission", value: "May 5" },
-  { label: "Selection Intimation", value: "May 15" },
-  { label: "Full Paper Submission", value: "June 30" },
+  { label: "Extended Abstract Submission", value: "May 15" },
+  { label: "Selection Intimation", value: "June 5" },
+  { label: "Full Paper Submission", value: "July 15" },
   { label: "Conference", value: "August 20 - 22" },
 ];
 
@@ -33,14 +33,110 @@ const submissionLinks = [
   {
     label: "Individual Presenters",
     href: "https://forms.gle/TnB1pZHJm5fuhg1s8",
+    closed: true,
   },
   {
     label: "Panel Session",
     href: "https://forms.gle/5JAu7o9MhR4JRR9R9",
+    closed: true,
   },
   {
     label: "Doctoral Colloquium",
     href: "https://forms.gle/oVSQXTYndWG34YvL9",
+    closed: false,
+  },
+];
+
+const esteemedSpeakerSections = [
+  {
+    title: "Speakers List",
+    speakers: [
+      {
+        name: "Prof. Takashi Kurosaki",
+        affiliation: "IER, Hitotsubashi University, Japan",
+      },
+      {
+        name: "Jean-Paul Gaudilliere",
+        affiliation: "Cermes, Paris",
+      },
+      {
+        name: "Sebastien Lechevalier",
+        affiliation: "EHESS, Paris",
+      },
+      {
+        name: "Prof. Melissa Vasi",
+        affiliation: "Deutsche Hochschule, Germany",
+      },
+      {
+        name: "Prof. Florian Blaschke",
+        affiliation: "Charite, Germany",
+      },
+      {
+        name: "Prof. Norbert Meiners",
+        affiliation: "Deutsche Hochschule, Germany",
+      },
+      {
+        name: "Dr. Sowmya Swaminathan",
+        affiliation: "World Health Organisation",
+      },
+      {
+        name: "Prof. K Srinath Reddy",
+        affiliation: "Public Health Foundation of India",
+      },
+      {
+        name: "Prof. Wen-Hua Kuo",
+        affiliation: "Yang-Ming University, Taiwan",
+      },
+      {
+        name: "Dr. Yamamoto Asuka",
+        affiliation: "Kyushu University",
+      },
+    ],
+  },
+  {
+    title: "Speakers List",
+    speakers: [
+      {
+        name: "Dr. Saradindu Bhaduri",
+        affiliation: "JNU",
+      },
+      {
+        name: "Dr. Ashish Singh",
+        affiliation: "IIT Bombay",
+      },
+      {
+        name: "Dr. Irudaya Rajan",
+        affiliation: "IIMAD",
+      },
+      {
+        name: "Dr. Pratap Mohanty",
+        affiliation: "IIT Roorkee",
+      },
+      {
+        name: "Dr. Unnikrishnan P",
+        affiliation: "TDU Bengaluru",
+      },
+      {
+        name: "Dr. Angan Sengupta",
+        affiliation: "Amrita Vishwa Vidyapeetham",
+      },
+      {
+        name: "Dr. Sreerupa",
+        affiliation: "Institute of Social Studies Trust",
+      },
+      {
+        name: "Prof. Mathew George",
+        affiliation: "Central University of Kerala",
+      },
+      {
+        name: "Dr. Projit Bihari Mukherji",
+        affiliation: "Ashoka University",
+      },
+      {
+        name: "Prof. Zakaria Siddiqui",
+        affiliation: "Jamia Millia University",
+      },
+    ],
   },
 ];
 
@@ -285,14 +381,42 @@ export default function HopesConferencePage() {
 
         <section className="bg-white py-16">
           <div className="container-custom grid gap-8 lg:grid-cols-2">
-            <div className="rounded-[2rem] bg-[#5C1A2E] p-8 text-white md:p-10">
+            <div className="rounded-[2rem] bg-[#5C1A2E] p-8 text-white md:p-10 lg:col-span-2">
               <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#E8D5B4]">
                 Speakers
               </p>
-              <h2 className="mt-4 font-serif text-3xl font-bold">Speaker Line-up</h2>
-              <p className="mt-6 max-w-xl leading-relaxed text-white/80">
-                The conference speaker list is being finalised.
-              </p>
+              <h2 className="mt-4 font-serif text-3xl font-bold">
+                Our Esteemed Speakers
+              </h2>
+              <div className="mt-8 grid gap-6">
+                {esteemedSpeakerSections.map((section, sectionIndex) => (
+                  <div
+                    key={`${section.title}-${sectionIndex}`}
+                    className={`rounded-[1.75rem] p-6 ring-1 ring-white/10 ${
+                      sectionIndex === 0 ? "bg-black/10" : "bg-white/8"
+                    }`}
+                  >
+                    <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#E8D5B4]">
+                      {section.title}
+                    </p>
+                    <div className="mt-5 grid gap-3 md:grid-cols-2">
+                      {section.speakers.map((speaker) => (
+                        <div
+                          key={`${section.title}-${sectionIndex}-${speaker.name}`}
+                          className="rounded-2xl border border-white/10 bg-white/[0.06] px-4 py-3 transition hover:border-[#E8D5B4]/50 hover:bg-white/10"
+                        >
+                          <h3 className="font-serif text-lg font-bold text-white">
+                            {speaker.name}
+                          </h3>
+                          <p className="mt-1 text-sm leading-relaxed text-white/75">
+                            {speaker.affiliation}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
 
             <div className="rounded-[2rem] bg-[#fcfbfa] p-8 ring-1 ring-[#5C1A2E]/10 md:p-10">
@@ -308,18 +432,31 @@ export default function HopesConferencePage() {
               </p>
               <div className="mt-8 flex flex-col gap-4">
                 {submissionLinks.map((item) => (
-                  <a
-                    key={item.label}
-                    href={item.href}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="inline-flex items-center justify-between rounded-2xl border border-[#5C1A2E]/12 bg-white px-5 py-4 text-sm font-semibold text-[#5C1A2E] transition hover:border-[#5C1A2E] hover:bg-[#fff7f9]"
-                  >
-                    <span>{item.label}</span>
-                    <span className="text-xs uppercase tracking-[0.2em] text-[#C8A97A]">
-                      Open
-                    </span>
-                  </a>
+                  item.closed ? (
+                    <div
+                      key={item.label}
+                      aria-disabled="true"
+                      className="inline-flex cursor-not-allowed items-center justify-between rounded-2xl border border-[#5C1A2E]/8 bg-[#f3ece8] px-5 py-4 text-sm font-semibold text-[#5C1A2E]/45"
+                    >
+                      <span>{item.label}</span>
+                      <span className="text-xs uppercase tracking-[0.2em] text-[#5C1A2E]/35">
+                        Closed
+                      </span>
+                    </div>
+                  ) : (
+                    <a
+                      key={item.label}
+                      href={item.href}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="inline-flex items-center justify-between rounded-2xl border border-[#5C1A2E]/12 bg-white px-5 py-4 text-sm font-semibold text-[#5C1A2E] transition hover:border-[#5C1A2E] hover:bg-[#fff7f9]"
+                    >
+                      <span>{item.label}</span>
+                      <span className="text-xs uppercase tracking-[0.2em] text-[#C8A97A]">
+                        Open
+                      </span>
+                    </a>
+                  )
                 ))}
               </div>
             </div>

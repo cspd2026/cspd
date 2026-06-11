@@ -78,9 +78,9 @@ const applicationSteps = [
 ];
 
 const importantDates = [
-  { label: "Last date for submission of applications", value: "24 May 2026" },
-  { label: "Confirmation / acceptance of proposals", value: "05 June 2026" },
-  { label: "Last date for registration and fee payment", value: "10 June 2026" },
+  { label: "Last date for submission of applications", value: "31 May 2026" },
+  { label: "Confirmation / acceptance of proposals", value: "07 June 2026" },
+  { label: "Last date for registration and fee payment", value: "20 June 2026" },
   { label: "Programme dates", value: "29 June - 03 July 2026" },
 ];
 
