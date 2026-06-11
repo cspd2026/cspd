@@ -2,6 +2,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
 const registrationFormUrl = "https://forms.gle/HNHXmzCu51zdK6Qc8";
+const selectedParticipantsPdf = "/summer-school-selected-participants.pdf";
 
 const overviewCards = [
   {
@@ -245,6 +246,35 @@ export default function SummerSchoolPage() {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-[#faf6f2] py-10 md:py-12">
+          <div className="container-custom">
+            <div className="rounded-[2rem] border border-[#C8A97A]/30 bg-gradient-to-r from-[#FFF8EE] via-white to-[#FCEEE7] p-6 shadow-sm ring-1 ring-[#5C1A2E]/8 md:p-8">
+              <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#A36B2D]">
+                    What&apos;s New
+                  </p>
+                  <h2 className="mt-3 font-serif text-2xl font-bold text-[#5C1A2E] md:text-3xl">
+                    Selected participants for the IHEPA-Christ Summer School have been announced
+                  </h2>
+                  <p className="mt-3 max-w-2xl leading-relaxed text-[#4f3d44]">
+                    The list of selected participants is now available as a downloadable
+                    PDF. Please use the link below to view or download the announcement.
+                  </p>
+                </div>
+
+                <a
+                  href={selectedParticipantsPdf}
+                  download
+                  className="inline-flex items-center justify-center rounded-full bg-[#5C1A2E] px-6 py-3 text-sm font-bold uppercase tracking-[0.2em] text-white transition hover:bg-[#7D2B40]"
+                >
+                  View Results
+                </a>
               </div>
             </div>
           </div>
