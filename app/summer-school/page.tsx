@@ -78,8 +78,8 @@ const applicationSteps = [
 ];
 
 const importantDates = [
-  { label: "Last date for submission of applications", value: "31 May 2026" },
-  { label: "Confirmation / acceptance of proposals", value: "07 June 2026" },
+  { label: "Last date for submission of applications", value: "Closed" },
+  { label: "Confirmation / acceptance of proposals", value: "Closed" },
   { label: "Programme dates", value: "29 June - 03 July 2026" },
 ];
 
@@ -529,21 +529,19 @@ export default function SummerSchoolPage() {
                 <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#E8D5B4]">
                   Submission Note
                 </p>
-                <p className="mt-3 text-sm leading-relaxed text-white/85">
+                <p className="mt-3 text-sm leading-relaxed text-white">
                   Combine all application documents into a single PDF and submit your
                   details through the registration form linked below. The listed
                   contact emails remain available for application support and
                   programme queries.
                 </p>
                 <div className="mt-5">
-                  <a
-                    href={registrationFormUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center bg-[#C8A97A] px-5 py-3 text-sm font-bold uppercase tracking-[0.2em] text-[#5C1A2E] transition hover:bg-[#E8D5B4]"
+                  <div
+                    aria-disabled="true"
+                    className="inline-flex cursor-not-allowed items-center border border-[#C8A97A]/35 bg-[#5C1A2E]/35 px-5 py-3 text-sm font-bold uppercase tracking-[0.2em] text-[#E8D5B4]"
                   >
-                    Apply Now
-                  </a>
+                    Applications Closed
+                  </div>
                 </div>
               </div>
             </div>
@@ -721,7 +719,7 @@ export default function SummerSchoolPage() {
                   <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#E8D5B4]">
                     {group.label}
                   </p>
-                  <div className="mt-5 space-y-3 text-sm leading-relaxed text-white/85">
+                  <div className="mt-5 space-y-3 text-sm leading-relaxed text-white">
                     {group.people.map((person) => (
                       <p key={person}>{person}</p>
                     ))}
@@ -743,20 +741,18 @@ export default function SummerSchoolPage() {
                   Build stronger health economics research with theory, data, and
                   policy focus in one place.
                 </h2>
-                <p className="mt-4 max-w-2xl leading-relaxed text-white/80">
+                <p className="mt-4 max-w-2xl leading-relaxed text-white">
                   Use the brochure deadlines above, prepare your CV and short
                   proposal, and complete your registration through the online form.
                 </p>
               </div>
               <div className="flex flex-wrap gap-4 lg:justify-end">
-                <a
-                  href={registrationFormUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center bg-[#C8A97A] px-6 py-3 text-sm font-bold uppercase tracking-[0.2em] text-[#5C1A2E] transition hover:bg-[#E8D5B4]"
+                <div
+                  aria-disabled="true"
+                  className="inline-flex cursor-not-allowed items-center border border-[#C8A97A]/35 bg-[#5C1A2E]/35 px-6 py-3 text-sm font-bold uppercase tracking-[0.2em] text-[#E8D5B4]"
                 >
-                  Apply Now
-                </a>
+                  Applications Closed
+                </div>
                 <a
                   href="mailto:cspd@christuniversity.in?subject=Summer%20School%202026%20Application"
                   className="inline-flex items-center border border-white/20 px-6 py-3 text-sm font-bold uppercase tracking-[0.2em] text-white transition hover:bg-white hover:text-[#5C1A2E]"
