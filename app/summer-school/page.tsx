@@ -80,7 +80,6 @@ const applicationSteps = [
 const importantDates = [
   { label: "Last date for submission of applications", value: "31 May 2026" },
   { label: "Confirmation / acceptance of proposals", value: "07 June 2026" },
-  { label: "Last date for registration and fee payment", value: "20 June 2026" },
   { label: "Programme dates", value: "29 June - 03 July 2026" },
 ];
 
@@ -168,10 +167,11 @@ export default function SummerSchoolPage() {
 
                 <div className="mt-10 flex flex-wrap gap-4">
                   <a
-                    href="#apply"
+                    href="/summer-school-program-schedule.docx"
+                    download
                     className="inline-flex items-center bg-[#C8A97A] px-6 py-3 text-sm font-bold uppercase tracking-[0.2em] text-[#5C1A2E] transition hover:bg-[#E8D5B4]"
                   >
-                    Go to application section
+                    View program schedule
                   </a>
                   <a
                     href="mailto:cspd@christuniversity.in?subject=IHEPA-CHRIST%20Health%20Economics%20Summer%20School%202026"

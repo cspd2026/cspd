@@ -24,8 +24,8 @@ const themesRight = [
 const importantDates = [
   { label: "Conference Announcement", value: "February 20" },
   { label: "Extended Abstract Submission", value: "May 15" },
-  { label: "Selection Intimation", value: "June 5" },
-  { label: "Full Paper Submission", value: "July 15" },
+  { label: "Selection Intimation", value: "June 19" },
+  { label: "Full Paper Submission", value: "August 10" },
   { label: "Conference", value: "August 20 - 22" },
 ];
 
@@ -43,7 +43,7 @@ const submissionLinks = [
   {
     label: "Doctoral Colloquium",
     href: "https://forms.gle/oVSQXTYndWG34YvL9",
-    closed: false,
+    closed: true,
   },
 ];
 
