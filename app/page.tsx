@@ -11,9 +11,17 @@ import Link from "next/link";
 const announcements = [
   {
     tag: "Results Announced",
+    title: "Selected participants for HOPES Doctoral Colloquium announced",
+    href: "/hopes-conference",
+    cta: "View Results",
+    description: "The selected participant list is now available.",
+  },
+  {
+    tag: "Results Announced",
     title: "Selected participants for IHEPA-Christ Summer School announced",
     href: "/summer-school",
-    cta: "View Summer School",
+    cta: "View Results",
+    description: "The list of selected participants is now available.",
   },
 ];
 
@@ -59,7 +67,7 @@ export default function Home() {
                   </h3>
 
                   <p className="text-gray-600 leading-relaxed text-sm flex-grow">
-                    The list of selected participants is now available.
+                    {item.description}
                   </p>
 
                   <div className="mt-5">

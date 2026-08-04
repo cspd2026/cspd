@@ -12,7 +12,7 @@ const About = () => {
 
           <div className="relative z-10 max-w-lg">
             <span className="inline-block text-[#C8A97A] text-xs font-bold uppercase tracking-[0.2em] mb-4">
-              Major Event
+              Upcoming Event
             </span>
             <h2 className="text-[#5C1A2E] text-3xl lg:text-4xl font-bold font-serif leading-tight mb-6">
               HOPES Conference 2026

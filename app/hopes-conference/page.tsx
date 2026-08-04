@@ -22,11 +22,8 @@ const themesRight = [
 ];
 
 const importantDates = [
-  { label: "Conference Announcement", value: "February 20" },
-  { label: "Extended Abstract Submission", value: "May 15" },
-  { label: "Selection Intimation", value: "June 19" },
-  { label: "Full Paper Submission", value: "August 10" },
-  { label: "Conference", value: "August 20 - 22" },
+  { label: "Doctoral Colloquium", value: "August 20, 2026" },
+  { label: "Hopes Conference", value: "August 21 & 22, 2026" },
 ];
 
 const submissionLinks = [
@@ -48,6 +45,7 @@ const submissionLinks = [
 ];
 
 const selectedParticipantsPdf = "/hopes-conference-selected-participants.pdf";
+const doctoralColloquiumPdf = "/hopes-doctoral-colloquium-selected-participants.pdf";
 
 const esteemedSpeakerSections = [
   {
@@ -251,10 +249,6 @@ export default function HopesConferencePage() {
               <h2 className="mt-3 font-serif text-2xl font-bold text-[#5C1A2E] md:text-3xl">
                 Selected participants for HOPES 2026
               </h2>
-              <p className="mt-3 max-w-2xl leading-relaxed text-[#4f3d44]">
-                Selection updates for the conference and doctoral colloquium are
-                available below.
-              </p>
 
               <div className="mt-7 grid gap-4 md:grid-cols-2">
                 <div className="flex flex-col justify-between rounded-[1.5rem] bg-white p-5 shadow-sm ring-1 ring-[#5C1A2E]/10 md:p-6">
@@ -282,19 +276,23 @@ export default function HopesConferencePage() {
                 <div className="flex flex-col justify-between rounded-[1.5rem] bg-[#5C1A2E] p-5 text-white shadow-sm md:p-6">
                   <div>
                     <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#E8D5B4]">
-                      Coming Soon
+                      Results Announced
                     </p>
                     <h3 className="mt-3 font-serif text-xl font-bold">
-                      Doctoral Colloquium
+                      Doctoral Colloquium 2026
                     </h3>
                     <p className="mt-2 text-sm leading-relaxed text-white/80">
-                      The selected participant list is being finalised and will be
-                      published here soon.
+                      The selected participant list is now available as a
+                      downloadable PDF.
                     </p>
                   </div>
-                  <span className="mt-5 inline-flex w-fit items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-bold uppercase tracking-[0.2em] text-white/70">
-                    Results Awaited
-                  </span>
+                  <a
+                    href={doctoralColloquiumPdf}
+                    download
+                    className="mt-5 inline-flex w-fit items-center justify-center rounded-full bg-[#E8D5B4] px-6 py-3 text-sm font-bold uppercase tracking-[0.2em] text-[#5C1A2E] transition hover:bg-[#F2E1C6]"
+                  >
+                    View Results
+                  </a>
                 </div>
               </div>
             </div>
