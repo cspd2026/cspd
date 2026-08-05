@@ -209,12 +209,11 @@ export default function HopesConferencePage() {
                     Explore Conference
                   </a>
                   <a
-                    href="https://cspdin.wordpress.com/wp-content/uploads/2026/03/hopes-conference-brochure.pdf"
-                    target="_blank"
-                    rel="noreferrer noopener"
+                    href="/hopes-tentative-schedule.pdf"
+                    download
                     className="inline-flex items-center border border-white/20 px-6 py-3 text-sm font-bold uppercase tracking-[0.2em] text-white transition hover:bg-white hover:text-[#5C1A2E]"
                   >
-                    Open Brochure
+                    Tentative Schedule
                   </a>
                 </div>
               </div>
