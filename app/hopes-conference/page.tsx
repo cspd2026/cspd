@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -26,142 +25,10 @@ const importantDates = [
   { label: "Hopes Conference", value: "August 21 & 22, 2026" },
 ];
 
-const submissionLinks = [
-  {
-    label: "Individual Presenters",
-    href: "https://forms.gle/TnB1pZHJm5fuhg1s8",
-    closed: true,
-  },
-  {
-    label: "Panel Session",
-    href: "https://forms.gle/5JAu7o9MhR4JRR9R9",
-    closed: true,
-  },
-  {
-    label: "Doctoral Colloquium",
-    href: "https://forms.gle/oVSQXTYndWG34YvL9",
-    closed: true,
-  },
-];
-
 const selectedParticipantsPdf = "/hopes-conference-selected-participants.pdf";
 const doctoralColloquiumPdf = "/hopes-doctoral-colloquium-selected-participants.pdf";
 
-const esteemedSpeakerSections = [
-  {
-    title: "Speakers List",
-    speakers: [
-      {
-        name: "Prof. Takashi Kurosaki",
-        affiliation: "IER, Hitotsubashi University, Japan",
-      },
-      {
-        name: "Jean-Paul Gaudilliere",
-        affiliation: "Cermes, Paris",
-      },
-      {
-        name: "Sebastien Lechevalier",
-        affiliation: "EHESS, Paris",
-      },
-      {
-        name: "Prof. Melissa Vasi",
-        affiliation: "Deutsche Hochschule, Germany",
-      },
-      {
-        name: "Prof. Florian Blaschke",
-        affiliation: "Charite, Germany",
-      },
-      {
-        name: "Prof. Norbert Meiners",
-        affiliation: "Deutsche Hochschule, Germany",
-      },
-      {
-        name: "Dr. Sowmya Swaminathan",
-        affiliation: "World Health Organisation",
-      },
-      {
-        name: "Prof. K Srinath Reddy",
-        affiliation: "Public Health Foundation of India",
-      },
-      {
-        name: "Prof. Wen-Hua Kuo",
-        affiliation: "Yang-Ming University, Taiwan",
-      },
-      {
-        name: "Dr. Yamamoto Asuka",
-        affiliation: "Kyushu University",
-      },
-    ],
-  },
-  {
-    title: "Speakers List",
-    speakers: [
-      {
-        name: "Dr. Saradindu Bhaduri",
-        affiliation: "JNU",
-      },
-      {
-        name: "Dr. Ashish Singh",
-        affiliation: "IIT Bombay",
-      },
-      {
-        name: "Dr. Irudaya Rajan",
-        affiliation: "IIMAD",
-      },
-      {
-        name: "Dr. Pratap Mohanty",
-        affiliation: "IIT Roorkee",
-      },
-      {
-        name: "Dr. Unnikrishnan P",
-        affiliation: "TDU Bengaluru",
-      },
-      {
-        name: "Dr. Angan Sengupta",
-        affiliation: "Amrita Vishwa Vidyapeetham",
-      },
-      {
-        name: "Dr. Sreerupa",
-        affiliation: "Institute of Social Studies Trust",
-      },
-      {
-        name: "Prof. Mathew George",
-        affiliation: "Central University of Kerala",
-      },
-      {
-        name: "Dr. Projit Bihari Mukherji",
-        affiliation: "Ashoka University",
-      },
-      {
-        name: "Prof. Zakaria Siddiqui",
-        affiliation: "Jamia Millia University",
-      },
-    ],
-  },
-];
-
-const hopesImages = [
-  {
-    src: "https://cspdin.wordpress.com/wp-content/uploads/2026/02/cspd-discussion-2.jpg",
-    alt: "Discussion session at CSPD",
-  },
-  {
-    src: "https://cspdin.wordpress.com/wp-content/uploads/2026/03/hopes-conference-crop.png",
-    alt: "HOPES Conference visual",
-  },
-];
-
 export default function HopesConferencePage() {
-  const [activeImage, setActiveImage] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveImage((current) => (current + 1) % hopesImages.length);
-    }, 3500);
-
-    return () => clearInterval(timer);
-  }, []);
-
   return (
     <div className="min-h-screen bg-white text-[#24131a]">
       <Navbar />
@@ -221,17 +88,12 @@ export default function HopesConferencePage() {
               <div className="relative">
                 <div className="absolute -right-6 -top-6 hidden h-28 w-28 rounded-full border-[18px] border-[#C8A97A]/20 md:block" />
                 <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-[#3D111F] p-3 shadow-2xl">
-                  <div className="relative aspect-[2712/1064] overflow-hidden rounded-[1.5rem]">
-                    {hopesImages.map((image, index) => (
-                      <img
-                        key={image.src}
-                        src={image.src}
-                        alt={image.alt}
-                        className={`absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-700 ${
-                          index === activeImage ? "opacity-100" : "opacity-0"
-                        }`}
-                      />
-                    ))}
+                  <div className="relative overflow-hidden rounded-[1.5rem] bg-white">
+                    <img
+                      src="https://cspdin.wordpress.com/wp-content/uploads/2026/03/hopes-conference-crop.png"
+                      alt="HOPES Conference visual"
+                      className="h-full w-full object-cover object-center"
+                    />
                   </div>
                 </div>
               </div>
@@ -438,84 +300,37 @@ export default function HopesConferencePage() {
         </section>
 
         <section className="bg-white py-16">
-          <div className="container-custom grid gap-8 lg:grid-cols-2">
-            <div className="rounded-[2rem] bg-[#5C1A2E] p-8 text-white md:p-10 lg:col-span-2">
+          <div className="container-custom">
+            <div className="rounded-[2rem] bg-[#5C1A2E] p-8 text-white md:p-10">
               <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#E8D5B4]">
                 Speakers
               </p>
               <h2 className="mt-4 font-serif text-3xl font-bold">
                 Our Esteemed Speakers
               </h2>
-              <div className="mt-8 grid gap-6">
-                {esteemedSpeakerSections.map((section, sectionIndex) => (
-                  <div
-                    key={`${section.title}-${sectionIndex}`}
-                    className={`rounded-[1.75rem] p-6 ring-1 ring-white/10 ${
-                      sectionIndex === 0 ? "bg-black/10" : "bg-white/8"
-                    }`}
-                  >
-                    <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#E8D5B4]">
-                      {section.title}
-                    </p>
-                    <div className="mt-5 grid gap-3 md:grid-cols-2">
-                      {section.speakers.map((speaker) => (
-                        <div
-                          key={`${section.title}-${sectionIndex}-${speaker.name}`}
-                          className="rounded-2xl border border-white/10 bg-white/[0.06] px-4 py-3 transition hover:border-[#E8D5B4]/50 hover:bg-white/10"
-                        >
-                          <h3 className="font-serif text-lg font-bold text-white">
-                            {speaker.name}
-                          </h3>
-                          <p className="mt-1 text-sm leading-relaxed text-white/75">
-                            {speaker.affiliation}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                ))}
+              <div className="mt-8 overflow-hidden rounded-[1.75rem] bg-white p-3 shadow-lg ring-1 ring-white/10">
+                <img
+                  src="/hopes-esteemed-speakers.png"
+                  alt="Our esteemed speakers list for HOPES 2026"
+                  className="h-auto w-full rounded-[1.25rem] object-contain"
+                />
               </div>
             </div>
+          </div>
+        </section>
 
-            <div className="rounded-[2rem] bg-[#fcfbfa] p-8 ring-1 ring-[#5C1A2E]/10 md:p-10">
-              <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#C8A97A]">
-                Submission
+        <section className="bg-[#faf6f2] pb-12 pt-4">
+          <div className="container-custom">
+            <div className="rounded-[2rem] border border-[#C8A97A]/30 bg-white p-6 shadow-sm ring-1 ring-[#5C1A2E]/8 md:p-8">
+              <p className="text-center text-sm font-bold uppercase tracking-[0.24em] text-[#A36B2D] md:text-base">
+                Our Knowledge Partners
               </p>
-              <h2 className="mt-4 font-serif text-3xl font-bold text-[#5C1A2E]">
-                Submission Links
-              </h2>
-              <p className="mt-4 leading-relaxed text-[#4f3d44]">
-                Use the links below for abstracts, panel sessions, and doctoral
-                colloquium submissions.
-              </p>
-              <div className="mt-8 flex flex-col gap-4">
-                {submissionLinks.map((item) => (
-                  item.closed ? (
-                    <div
-                      key={item.label}
-                      aria-disabled="true"
-                      className="inline-flex cursor-not-allowed items-center justify-between rounded-2xl border border-[#5C1A2E]/8 bg-[#f3ece8] px-5 py-4 text-sm font-semibold text-[#5C1A2E]/45"
-                    >
-                      <span>{item.label}</span>
-                      <span className="text-xs uppercase tracking-[0.2em] text-[#5C1A2E]/35">
-                        Closed
-                      </span>
-                    </div>
-                  ) : (
-                    <a
-                      key={item.label}
-                      href={item.href}
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      className="inline-flex items-center justify-between rounded-2xl border border-[#5C1A2E]/12 bg-white px-5 py-4 text-sm font-semibold text-[#5C1A2E] transition hover:border-[#5C1A2E] hover:bg-[#fff7f9]"
-                    >
-                      <span>{item.label}</span>
-                      <span className="text-xs uppercase tracking-[0.2em] text-[#C8A97A]">
-                        Open
-                      </span>
-                    </a>
-                  )
-                ))}
+              <div className="mt-5 overflow-hidden rounded-[1.5rem] bg-[#fcfbfa] p-2">
+                <img
+                  src="/hopes-knowledge-partners.png"
+                  alt="HOPES 2026 knowledge partners"
+                  className="h-auto w-full rounded-[1.25rem] object-contain"
+                />
               </div>
             </div>
           </div>
