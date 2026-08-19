@@ -70,10 +70,12 @@ export default function HopesConferencePage() {
 
                 <div className="mt-10 flex flex-wrap gap-4">
                   <a
-                    href="#concept"
+                    href="https://eacademia.southindianbank.bank.in/ChristFee/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center bg-[#C8A97A] px-6 py-3 text-sm font-bold uppercase tracking-[0.2em] text-[#5C1A2E] transition hover:bg-[#E8D5B4]"
                   >
-                    Explore Conference
+                    Conference Registration
                   </a>
                   <a
                     href="/hopes-final-schedule.pdf"
@@ -205,10 +207,18 @@ export default function HopesConferencePage() {
             </div>
 
             <div className="overflow-hidden rounded-[2rem] bg-white shadow-sm ring-1 ring-[#5C1A2E]/8">
-              <div className="border-b border-[#5C1A2E]/10 px-6 py-5 md:px-8">
+              <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#5C1A2E]/10 px-6 py-5 md:px-8">
                 <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#C8A97A]">
                   Campus Map
                 </p>
+                <a
+                  href="https://christuniversity.in/how-to-reach-christ-university"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-bold uppercase tracking-[0.2em] text-[#5C1A2E] transition hover:text-[#A36B2D]"
+                >
+                  How To Reach
+                </a>
               </div>
               <div className="bg-[#f7f2ea] p-3 md:p-4">
                 <img
