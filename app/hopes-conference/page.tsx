@@ -76,11 +76,11 @@ export default function HopesConferencePage() {
                     Explore Conference
                   </a>
                   <a
-                    href="/hopes-tentative-schedule.pdf"
+                    href="/hopes-final-schedule.pdf"
                     download
                     className="inline-flex items-center border border-white/20 px-6 py-3 text-sm font-bold uppercase tracking-[0.2em] text-white transition hover:bg-white hover:text-[#5C1A2E]"
                   >
-                    Tentative Schedule
+                    Schedule
                   </a>
                 </div>
               </div>
@@ -161,45 +161,62 @@ export default function HopesConferencePage() {
         </section>
 
         <section className="bg-[#faf6f2] py-16">
-          <div className="container-custom grid gap-6 lg:grid-cols-3">
-            <div className="rounded-[2rem] bg-white p-8 shadow-sm ring-1 ring-[#5C1A2E]/8">
-              <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#C8A97A]">
-                Venue
-              </p>
-              <h2 className="mt-4 font-serif text-2xl font-bold text-[#5C1A2E]">
-                Bangalore Central Campus
-              </h2>
-              <p className="mt-4 leading-relaxed text-[#5c4a50]">
-                CHRIST (Deemed to be University), Hosur Road, Bengaluru - 560029,
-                Karnataka, India.
-              </p>
+          <div className="container-custom grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-stretch">
+            <div className="flex flex-col gap-6">
+              <div className="rounded-[2rem] bg-white p-8 shadow-sm ring-1 ring-[#5C1A2E]/8">
+                <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#C8A97A]">
+                  Venue
+                </p>
+                <h2 className="mt-4 font-serif text-2xl font-bold text-[#5C1A2E]">
+                  Bangalore Central Campus
+                </h2>
+                <p className="mt-4 leading-relaxed text-[#5c4a50]">
+                  CHRIST (Deemed to be University), Hosur Road, Bengaluru - 560029,
+                  Karnataka, India.
+                </p>
+              </div>
+
+              <div className="rounded-[2rem] bg-[#5C1A2E] p-8 text-white shadow-sm">
+                <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#E8D5B4]">
+                  Focus
+                </p>
+                <h2 className="mt-4 font-serif text-2xl font-bold">
+                  Interdisciplinary health systems dialogue
+                </h2>
+                <p className="mt-4 leading-relaxed text-white/80">
+                  A rigorous academic platform connecting economics, social sciences,
+                  public health, policy, and technology around contemporary health
+                  challenges.
+                </p>
+              </div>
+
+              <div className="rounded-[2rem] bg-white p-8 shadow-sm ring-1 ring-[#5C1A2E]/8">
+                <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#C8A97A]">
+                  Format
+                </p>
+                <h2 className="mt-4 font-serif text-2xl font-bold text-[#5C1A2E]">
+                  Conference plus doctoral colloquium
+                </h2>
+                <p className="mt-4 leading-relaxed text-[#5c4a50]">
+                  Early-career researchers can present work in detail and receive
+                  feedback from domain experts through the colloquium track.
+                </p>
+              </div>
             </div>
 
-            <div className="rounded-[2rem] bg-[#5C1A2E] p-8 text-white shadow-sm">
-              <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#E8D5B4]">
-                Focus
-              </p>
-              <h2 className="mt-4 font-serif text-2xl font-bold">
-                Interdisciplinary health systems dialogue
-              </h2>
-              <p className="mt-4 leading-relaxed text-white/80">
-                A rigorous academic platform connecting economics, social sciences,
-                public health, policy, and technology around contemporary health
-                challenges.
-              </p>
-            </div>
-
-            <div className="rounded-[2rem] bg-white p-8 shadow-sm ring-1 ring-[#5C1A2E]/8">
-              <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#C8A97A]">
-                Format
-              </p>
-              <h2 className="mt-4 font-serif text-2xl font-bold text-[#5C1A2E]">
-                Conference plus doctoral colloquium
-              </h2>
-              <p className="mt-4 leading-relaxed text-[#5c4a50]">
-                Early-career researchers can present work in detail and receive
-                feedback from domain experts through the colloquium track.
-              </p>
+            <div className="overflow-hidden rounded-[2rem] bg-white shadow-sm ring-1 ring-[#5C1A2E]/8">
+              <div className="border-b border-[#5C1A2E]/10 px-6 py-5 md:px-8">
+                <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#C8A97A]">
+                  Campus Map
+                </p>
+              </div>
+              <div className="bg-[#f7f2ea] p-3 md:p-4">
+                <img
+                  src="/hopes-campus-map.png"
+                  alt="Campus map for CHRIST Bangalore Central Campus"
+                  className="h-auto w-full rounded-[1.5rem] object-contain"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -211,7 +228,7 @@ export default function HopesConferencePage() {
                 Concept Note
               </p>
               <h2 className="mt-4 font-serif text-3xl font-bold text-[#5C1A2E]">
-                Why this conference matters
+                Why this conference matters?
               </h2>
               <div className="mt-6 space-y-4 leading-relaxed text-[#4f3d44]">
                 <p>
