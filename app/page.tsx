@@ -7,6 +7,7 @@ import Testimonials from "@/components/Testimonials";
 import Partners from "@/components/Partners";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import HopesGallery from "@/components/HopesGallery";
 
 const announcements = [
   {
@@ -34,6 +35,7 @@ export default function Home() {
         <About />
         <WhyChooseUs />
         <Courses />
+        <HopesGallery />
         <section className="section-padding bg-[#faf6f2]">
           <div className="container-custom">
             <div className="mb-10 max-w-3xl space-y-4">
