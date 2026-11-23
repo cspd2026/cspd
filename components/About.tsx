@@ -1,12 +1,16 @@
 import Link from "next/link";
+import HopesGallery from "@/components/HopesGallery";
 
 const About = () => {
   return (
     <section id="about" className="bg-white overflow-hidden">
+      <div className="py-12">
+        <HopesGallery />
+      </div>
       <div className="grid grid-cols-1 lg:grid-cols-2">
 
         {/* TOP ROW LEFT — Text block (Inauguration) */}
-        <div className="relative bg-white p-12 lg:p-16 flex flex-col justify-center min-h-[420px] overflow-hidden">
+        {/* <div className="relative bg-white p-12 lg:p-16 flex flex-col justify-center min-h-[420px] overflow-hidden">
           <div className="absolute right-[-60px] top-[50%] -translate-y-1/2 w-[280px] h-[280px] rounded-full border-[40px] border-[#5C1A2E]/5 pointer-events-none"></div>
           <div className="absolute right-[60px] top-[20%] w-[120px] h-[120px] rounded-full border-[20px] border-[#5C1A2E]/5 pointer-events-none"></div>
 
@@ -29,17 +33,17 @@ This three-day conference aims for a rigorous academic discourse on health-syste
               </svg>
             </Link>
           </div>
-        </div>
+        </div> */}
 
         {/* TOP ROW RIGHT — Image */}
-        <div className="relative min-h-[420px] overflow-hidden bg-[#0A0E14] flex items-center justify-center">
+        {/* <div className="relative min-h-[420px] overflow-hidden bg-[#0A0E14] flex items-center justify-center">
           <img
             src="/hopes.jpeg"
             alt="HOPES Conference 2026 Poster"
             className="w-full h-full object-contain hover:scale-105 transition-transform duration-700"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
-        </div>
+        </div> */}
 
         {/* BOTTOM ROW LEFT — Image */}
         <div className="relative min-h-[420px] overflow-hidden">

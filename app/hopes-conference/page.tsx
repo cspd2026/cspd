@@ -2,6 +2,7 @@
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import HopesGallery from "@/components/HopesGallery";
 
 const themesLeft = [
   "Health Systems and New Challenges",
@@ -102,6 +103,8 @@ export default function HopesConferencePage() {
             </div>
           </div>
         </section>
+
+        <HopesGallery />
 
         <section className="bg-[#faf6f2] py-10 md:py-12">
           <div className="container-custom">

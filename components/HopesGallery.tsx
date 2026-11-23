@@ -51,18 +51,21 @@ export default function HopesGallery() {
 
   return (
     <section aria-labelledby="hopes-gallery-title" className="bg-[#3D111F] text-white">
-      <div className="container-custom grid gap-10 py-16 md:py-20 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:gap-16">
-        <div>
-          <p className="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[#D8B985]">
-            Three days of ideas and connection
+      <div className="container-custom grid w-full gap-8 py-12 md:gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-12">
+        <div className="max-w-xl">
+          <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#D8B985]">
+            Conference Highlights
           </p>
-          <h2 id="hopes-gallery-title" className="font-serif text-4xl font-bold leading-tight md:text-5xl">
+          <h2 id="hopes-gallery-title" className="font-serif text-3xl font-bold leading-tight sm:text-4xl lg:text-[2.7rem]">
             HOPES Conference 2026
           </h2>
-          <p className="mt-5 max-w-lg text-base leading-relaxed text-white/75">
-            A look back at the conversations, research, and people who made this year’s conference special.
+          <p className="mt-4 max-w-lg text-sm leading-7 text-white/75 sm:text-base">
+            This three-day conference brought together field experts and early-career researchers for rigorous academic discourse on health-system challenges and the latest research in social sciences.
           </p>
-          <div className="mt-8 flex flex-wrap items-center gap-3" aria-label="Choose conference day">
+          <p className="mt-3 max-w-lg text-sm leading-7 text-white/75 sm:text-base">
+            Thank you to everyone who shared their insights and made HOPES 2026 a memorable gathering.
+          </p>
+          <div className="mt-6 flex flex-wrap items-center gap-3" aria-label="Choose conference day">
             {[1, 2, 3].map((day) => {
               const firstPhoto = photos.findIndex((item) => item.day === day);
               const selected = photo.day === day;
@@ -92,8 +95,8 @@ export default function HopesGallery() {
           </div>
         </div>
 
-        <div className="mx-auto w-full max-w-[640px]">
-          <div className="mx-auto flex h-[240px] w-full max-w-[640px] items-center justify-center overflow-hidden rounded-2xl bg-black/25 sm:h-[320px] lg:h-[360px]">
+        <div className="mx-auto w-full min-w-0 max-w-3xl">
+          <div className="flex h-[240px] w-full items-center justify-center overflow-hidden rounded-2xl bg-black/25 sm:h-[320px] lg:h-[360px]">
             <img
               key={photo.src}
               src={photo.src}
